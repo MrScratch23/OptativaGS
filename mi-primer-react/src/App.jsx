@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const nombre = "Rubén";
+  const edad = 23;  
+  const a = 10;
+  const b = 5;
+  let mensaje = "";
+
+  const usuario = {
+    nombre: "Rubén",
+    edad: 29,
+    ciudad: "Sevilla",
+    foto: "https://cdn.shopify.com/s/files/1/0747/5317/9944/files/Il-Capitano.jpg?v=1739325236"
+  };
+
+  if (edad >= 18) {
+    mensaje = "Mayor de edad";
+  } else {
+    mensaje = "No soy mayor de edad";
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    
+    <div class="presentacion">
+      <img src={usuario.foto} alt="foto de usuario" class="foto" />
+      <div class="info">
+        <p>Hola {usuario.nombre}.</p>
+        <p>Tienes {usuario.edad} años, tío joven.</p>
+        <p>Eres {mensaje}.</p>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+
+    
+  );
 }
 
-export default App
+export default App;
