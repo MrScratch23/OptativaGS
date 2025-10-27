@@ -43,8 +43,6 @@ function App() {
 
       <div>
         {digimons.length > 0 ? (
-
-          // reocrrer con map
           digimons.map((digimon) => (
             <div className="digimon-card" key={digimon.name}>
               <img src={digimon.img} alt={digimon.name} className="digimon-image" />
