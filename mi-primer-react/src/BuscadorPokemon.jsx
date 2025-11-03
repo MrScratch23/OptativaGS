@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div>
-      {/* Reemplazamos la imagen anterior por la nueva */}
+      {/* reemplace el h1 con un font de pokemon que se vea mejor */}
       <a href="https://fontmeme.com/es/fuente-pokemon/">
         <img 
           src="https://fontmeme.com/permalink/251103/08dd0b3c911d9b8fe9a9902e509dcaff.png" 
