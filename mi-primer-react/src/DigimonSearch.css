@@ -225,13 +225,25 @@
   gap: 20px;
 }
 
+/* Modificación para la sección de descripción */
+.detail-section {
+  background: #f1f3f4; /* Un fondo gris claro para que no sea tan blanco */
+  padding: 15px;
+  border-radius: 10px;
+}
+
 .detail-section h3 {
-  color: #667eea;
+  color: #667eea; /* Color del título en azul */
   margin-bottom: 10px;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 5px;
 }
 
+.detail-section p {
+  color: #333; /* Color del texto en gris oscuro para facilitar la lectura */
+}
+
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
