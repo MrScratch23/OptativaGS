@@ -28,9 +28,17 @@ function Home() {
       <h1>Películas de Studio Ghibli</h1>
       <ul>
         {films.map((f) => (
-          <li key={f.id}>
-            <Link to={`/film/${f.id}`}>
-              {f.title}
+          <li key={f.id} style={{ marginBottom: "20px", display: "flex", alignItems: "center" }}>
+            <Link to={`/film/${f.id}`} style={{ display: "flex", alignItems: "center", textDecoration: "none", color: "#2e3a59" }}>
+              {/* aqui iria la imagen de la peli */}
+              <img 
+                src={f.image}  
+                alt={f.title}
+                style={{ width: "60px", height: "auto", marginRight: "15px", borderRadius: "8px" }} 
+              />
+              <span style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                {f.title} {/* aqui iria eltitulo de la peli */}
+              </span>
             </Link>
           </li>
         ))}

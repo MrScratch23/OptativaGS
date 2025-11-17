@@ -13,16 +13,23 @@ function Favoritos() {
       <h1>Tus películas favoritas</h1>
       <ul>
         {favoritos.map((f) => (
-          <li key={f.id}>
-            <Link to={`/film/${f.id}`}>
-              <div>
-                <img
-                  src={f.image}
-                  alt={f.title}
-                  style={{ width: "100px", height: "150px", objectFit: "cover" }}
-                />
-                <p>{f.title}</p>
-              </div>
+          <li key={f.id} style={{ marginBottom: "20px", display: "flex", alignItems: "center" }}>
+            <Link to={`/film/${f.id}`} style={{ display: "flex", alignItems: "center", textDecoration: "none", color: "#2e3a59" }}>
+              {/* aqui iria la imagen de la peli */}
+              <img
+                src={f.image}
+                alt={f.title}
+                style={{
+                  width: "100px",
+                  height: "150px",
+                  objectFit: "cover",
+                  marginRight: "15px",
+                  borderRadius: "8px"
+                }}
+              />
+              <span style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                {f.title}
+              </span>
             </Link>
           </li>
         ))}
