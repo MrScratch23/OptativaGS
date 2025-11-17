@@ -1,0 +1,237 @@
+/* Estilos Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif; /* Fuente clásica y elegante */
+}
+
+body {
+  background-color: #f5f2eb; /* Fondo crema suave para dar calidez */
+  color: #2e3a59; /* Azul oscuro para contraste, evocando cielos nocturnos */
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Estilo para el encabezado y navegación */
+h1, h2 {
+  font-family: 'Times New Roman', Times, serif; /* Fuente elegante, estilo clásico */
+  text-align: center;
+  color: #2e3a59;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+nav {
+  background-color: #355c7d; /* Azul-verde profundo para un efecto relajante */
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f8b400; /* Efecto dorado al pasar el cursor */
+  color: #2e3a59;
+}
+
+nav a.active {
+  background-color: #2e3a59;
+  color: white;
+}
+
+/* Estilos para las tarjetas de películas */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+li {
+  background-color: #fff7e6; /* Beige cálido para las tarjetas */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 5px solid #355c7d; /* Agregar un borde debajo de la imagen */
+}
+
+li p {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #f8b400; /* Botón dorado */
+  color: #2e3a59;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2e3a59;
+  color: white;
+}
+
+/* Página de Detalles de la Película */
+.detail-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff7e6;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.detail-container h1 {
+  font-size: 2.5rem;
+  color: #2e3a59;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.detail-container p {
+  font-size: 1.1rem;
+  color: #2e3a59;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+.detail-container .button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Página de Favoritos */
+.favoritos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.favoritos-list li {
+  background-color: #fff7e6;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favoritos-list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.favoritos-list img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.favoritos-list p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.favoritos-list a {
+  text-decoration: none;
+  color: #2e3a59;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.favoritos-list a:hover {
+  color: #f8b400;
+}
+
+footer {
+  background-color: #2e3a59;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-container {
+    padding: 15px;
+  }
+
+  .favoritos-list {
+    grid-template-columns: 1fr;
+  }
+}
