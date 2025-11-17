@@ -17,7 +17,7 @@ function Favoritos() {
             <Link to={`/film/${f.id}`} style={{ display: "flex", alignItems: "center", textDecoration: "none", color: "#2e3a59" }}>
               {/* aqui iria la imagen de la peli */}
               <img
-                src={f.image}
+                src={f.imagen}
                 alt={f.title}
                 style={{
                   width: "100px",
